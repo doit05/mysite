@@ -1,0 +1,13 @@
+[target]
+path = mysite
+[deps]
+context = 
+github.com/astaxie/beego = 
+github.com/docker/docker = 
+github.com/garyburd/redigo = 
+github.com/go-sql-driver/mysql = 
+github.com/weilaihui/fdfs_client = 
+
+[res]
+include = views|static|conf
+

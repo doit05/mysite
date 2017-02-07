@@ -8,11 +8,7 @@ import (
 	"mysite/helper/apicode"
 )
 
-type DockerClientController struct {
-	BaseController
-}
-
-func (c *DockerClientController) DockerPs() {
+func (c *DockerClientController) DockerSwarm() {
 	cli, err := client.NewEnvClient()
 	// cli, err := client.NewClient("tcp://www.bigolive.site:5555", "v1.22", nil, nil)
 	if err != nil {

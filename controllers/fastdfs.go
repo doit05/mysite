@@ -14,7 +14,7 @@ type FastdfsController struct {
 }
 
 func (c *FastdfsController) Get() {
-	path := "/Users/doit/Downloads/ting.jpg"
+	path := "/Users/doit/Downloads/hello.txt"
 	res, fileMd5, err := c.testFastdfs(path)
 	if err == nil {
 		url := c.toUrl(res, fileMd5)
@@ -47,7 +47,7 @@ func (c *FastdfsController) testFastdfs(path string) (uploadResponse *fdfs_clien
 	}
 	fileMd5 = helper.Md5Bytes(fileBuffer)
 
-	uploadResponse, err = fdfsClient.UploadByBuffer(fileBuffer, "")
+	uploadResponse, err = fdfsClient.UploadByBuffer(fileBuffer, "txt")
 
 	if err != nil {
 		utils.Log.Error("open err %v", err)
