@@ -7,12 +7,6 @@ import (
 )
 
 func init() {
-//测试
-beego.Router("/system/test", &controllers.FastdfsController{}, "get:Get")
-
-//docker
-beego.Router("/docker/client/ps", &controllers.DockerClientController{}, "get:DockerPs")
-
 
 	beego.Router("/sql", &controllers.UserController{}, "get:ExecSql")
 
