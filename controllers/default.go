@@ -16,6 +16,12 @@ type MainController struct {
 func init() {
 }
 
+func (c *MainController) Index() {
+	c.Data["Message"] = "www.doit05.cn"
+	c.TplName = "default.tpl"
+	c.Render()
+}
+
 func (this *MainController) Upload() {
 	filetype, err := this.GetInt("filetype")
 

@@ -7,9 +7,7 @@ import (
 )
 
 func init() {
-
-	beego.Router("/sql", &controllers.UserController{}, "get:ExecSql")
-
+	beego.ErrorController(&controllers.ErrorController{})
 	//条码插入
 	beego.Router("/system/addbarcode", &controllers.BarCodeController{}, "post:AddBarCode")
 
@@ -93,5 +91,7 @@ func init() {
 	beego.Router("/daily/concelcollectfood", &controllers.FoodController{}, "get:ConcelCollectFoods")
 	//中国居民膳食成分参考路由
 	beego.Router("/system/getchnutriref", &controllers.ChdrisController{}, "post:GetChNutriRefs")
+
+	beego.Router("/", &controllers.MainController{}, "get:Index")
 
 }
